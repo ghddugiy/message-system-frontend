@@ -107,7 +107,9 @@ export const ComposeForm: React.FC<ComposeFormProps> = ({
     recipientEmail: recipient,
     subject: 'TimeDrop Message',
     message: message,
-    scheduledAt: `${deliveryDate} ${deliveryTime}:00`,
+    scheduledAt: new Date(
+  `${deliveryDate}T${deliveryTime}:00`
+).toISOString(),
   }
 );
 
